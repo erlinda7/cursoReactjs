@@ -4,10 +4,9 @@ import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 import './global.css';
 
-import BadgeNew from './pages/BadgeNew';
-import Badges from './pages/Badges'
 
+import App from './components/App';
 
 const contanier = document.getElementById('app');  //app es el id de un div
 
-ReactDOM.render(<Badges />,  contanier);
+ReactDOM.render(<App />,  contanier);
