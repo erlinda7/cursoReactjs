@@ -23,12 +23,12 @@ class BadgeNew extends React.Component {
                                 firstName="Erlinda"
                                 lastName="Chambi"
                                 twitter="erlindachambi"
-                                jobTitle="Frontend Engineer" 
+                                jobTitle="Frontend Engineer"
                                 avatar="https://www.gravatar.com/avatar?d=identicon"
-                                />
+                            />
                         </div>
                         <div className="col-6">
-                            <BadgeForm/>
+                            <BadgeForm />
                         </div>
                     </div>
                 </div>
