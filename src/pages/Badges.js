@@ -10,23 +10,23 @@ import './styles/Badges.css'
 
 
 class Badges extends React.Component {
-   
 
-    constructor(props){  //mount
+
+    constructor(props) {  //mount
         super(props);
         console.log("1. constructor()");
         this.state = {
             data: []
         }
-        
+
     }
 
-    componentDidMount(){ //mount
+    componentDidMount() { //mount
         console.log("3. componenteDidMount()");
-
-        setTimeout(()=>{
+        //guardamos el valor de timeout
+        this.timeoutId = setTimeout(() => {
             this.setState({
-                data:[
+                data: [
                     {
                         id: "2de30c42-9deb-40fc-a41f-05e62b5939a7",
                         firstName: "Freda",
@@ -56,10 +56,10 @@ class Badges extends React.Component {
                     },
                 ]
             })
-        },3000)
+        }, 3000)
     }
 
-    componentDidUpdate(prevProps, prevState){
+    componentDidUpdate(prevProps, prevState) {
         console.log("5. componentDidUpdate()");
         console.log({
             prevProps: prevProps,
@@ -69,14 +69,18 @@ class Badges extends React.Component {
             props: this.props,
             state: this.state
         });
-        
-        
+
+
     }
 
+    componentWillUnmount() {
+        console.log("6. componentWillUnmount");
+        clearTimeout(this.timeoutId); //consumimos timeoutId
+    }
 
     render() { //mount, update
         console.log("2/4. render()");
-        
+
         return (
             <React.Fragment>
                 <div className="Badges">
